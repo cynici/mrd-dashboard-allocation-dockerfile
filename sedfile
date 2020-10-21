@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+#sed -n 's/^\([^-]*-[^-]*\)-.*/\1/p' rpm.list
+
+sed -n \
+  -e 's/-[0-9\.]*.amzn1.x86_64$//p' \
+  -e 's/-[0-9\.]*.amzn1.noarch$//p' \
+  rpm.list
