@@ -568,7 +568,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
  tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && \
  rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-RUN wget -O /usr/local/bin/gosu https://github.com/tianon/gosu/releases/download/1.12/gosu-amd64 
+RUN wget -O /usr/local/bin/gosu https://github.com/tianon/gosu/releases/download/1.12/gosu-amd64 && chmod 755 /usr/local/bin/gosu
 
 # Merge addition and modification into existing /etc/
 COPY ./etc /etc
